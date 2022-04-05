@@ -1,0 +1,13 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Login
+  link(rel='stylesheet' href='/css/form.css')
+body
+.container
+  .container-login
+    form.login(method="post" action="/newImg/" enctype="multipart/form-data")
+      input(type='file' name='image')
+      textarea(rows="2" name='descripcion' placeholder='descripcion')
+      input.btn-login(type='submit' value='Login')

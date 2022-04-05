@@ -1,0 +1,25 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title CRUD NodeJS-Multer
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='/css/styles.css')
+body
+.container
+  header.container-title
+    h1.container-title__text NodeJS-Multer
+    a.btn.btn__title(href="/newImg/") Agregar
+  main.content
+    if images.length > 0
+      each img in images
+        .card
+          img.card__img(src=`${img.path}` alt='')
+          p.card__text= img.descripcion
+          .container__card__btn
+            a.btn.btn__card(href=`/editar/${img._id}`) Editar
+            a.btn.btn__card(href=`/eliminar/${img._id}`) Eliminar
+  footer.container-title.container-title--footer
+    h2.container-title__text Gabriel Acero 2022 &copy;
